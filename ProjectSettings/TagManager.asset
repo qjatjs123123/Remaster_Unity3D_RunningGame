@@ -13,6 +13,10 @@ TagManager:
   - min
   - sec
   - Water
+  - Interact
+  - SpearTrap
+  - Spear
+  - SpearBoxes
   layers:
   - Default
   - TransparentFX

@@ -33,7 +33,7 @@ public class game_over : MonoBehaviour
         }
         else if (col.tag == "Water")
         {
-            Debug.Log("¹°");
+
             Destroy(gameObject, 1);
 
         }
