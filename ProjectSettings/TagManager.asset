@@ -12,6 +12,7 @@ TagManager:
   - hour
   - min
   - sec
+  - Water
   layers:
   - Default
   - TransparentFX

@@ -44,6 +44,7 @@ public class R1_ShottingSys : MonoBehaviour
         }
 
         m_tfTarget = t_shortestTarget;
+        Debug.Log(m_tfTarget);
     }
 
     //½ºÅæ ÇÁ¸®ÆÕ »ý¼ºÇÔ¼ö

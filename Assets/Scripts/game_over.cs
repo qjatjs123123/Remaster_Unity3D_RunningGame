@@ -14,9 +14,10 @@ public class game_over : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        DieMessage = GameObject.Find("Canvas").transform.Find("DieMessage").gameObject;
+
         if (col.tag == "Player")
         {
+            DieMessage = GameObject.Find("Canvas").transform.Find("DieMessage").gameObject;
             DieMessage.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -28,6 +29,12 @@ public class game_over : MonoBehaviour
 
             Player.GetComponent<MoveBehaviour>().PlaySound("DIE");
 
+
+        }
+        else if (col.tag == "Water")
+        {
+            Debug.Log("¹°");
+            Destroy(gameObject, 1);
 
         }
     }
