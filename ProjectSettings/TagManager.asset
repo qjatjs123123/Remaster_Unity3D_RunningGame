@@ -17,6 +17,7 @@ TagManager:
   - SpearTrap
   - Spear
   - SpearBoxes
+  - round2_trap0_1
   layers:
   - Default
   - TransparentFX
