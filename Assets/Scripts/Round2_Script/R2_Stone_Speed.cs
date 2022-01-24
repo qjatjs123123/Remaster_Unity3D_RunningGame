@@ -16,6 +16,12 @@ public class R2_Stone_Speed : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Water")
+            Destroy(gameObject, 1f);
+    }
+
 
     // Update is called once per frame
     void Update()

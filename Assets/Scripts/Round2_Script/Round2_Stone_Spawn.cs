@@ -21,10 +21,10 @@ public class Round2_Stone_Spawn : MonoBehaviour
     private void stone_spawn()
     {
         int random = Random.Range(0, StoneSpawn.Length);
-        float random_x = Random.Range(StoneSpawn[0].position.x, StoneSpawn[5].position.x);
+        float random_x = Random.Range(StoneSpawn[0].position.x, StoneSpawn[StoneSpawn.Length-1].position.x);
         Vector3 stoneSpawn = new Vector3(random_x, StoneSpawn[random].position.y, StoneSpawn[random].position.z);
-        Instantiate(Stone, stoneSpawn,Quaternion.identity);
-        
+        GameObject st = Instantiate(Stone, stoneSpawn,Quaternion.identity);
+        Destroy(st, 5.0f);
     }
     // Update is called once per frame
     void Update()
