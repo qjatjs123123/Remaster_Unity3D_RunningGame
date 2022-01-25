@@ -18,6 +18,10 @@ TagManager:
   - Spear
   - SpearBoxes
   - round2_trap0_1
+  - whale
+  - whale1
+  - whale2
+  - whale3
   layers:
   - Default
   - TransparentFX
