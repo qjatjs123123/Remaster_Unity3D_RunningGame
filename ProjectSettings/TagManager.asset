@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - SpearBoxes
+  - Interact
+  - Terrain
+  - Water
+  - round2_trap0_1
+  - whale
+  - SpearTrap
+  - Spear
+  - BoomEndSpawn
+  - Boom
+  - Bomb
   layers:
   - Default
   - TransparentFX
