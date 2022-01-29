@@ -6,7 +6,7 @@ public class Round2_Trap0_GoSpawn : MonoBehaviour
 {
     public bool turnon = false;
     public Transform Target_pos;
-
+    public bool IsUP = false;
 
     int num= 30;
     // Start is called before the first frame update
@@ -20,9 +20,12 @@ public class Round2_Trap0_GoSpawn : MonoBehaviour
     {
         if (!turnon)
             return;
+        if(IsUP)
+            transform.Translate(-Vector3.up * 8f * Time.deltaTime);
+        if (!IsUP)
+            transform.Translate(Vector3.forward * 8f * Time.deltaTime);
 
-        Vector3 v = new Vector3(Target_pos.position.x, Target_pos.position.y, Target_pos.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, v, 8f * Time.deltaTime);
+
 
 
     }
