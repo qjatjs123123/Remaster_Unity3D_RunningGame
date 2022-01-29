@@ -18,11 +18,11 @@ public class R2_Stone_Delete : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Water")
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.2f);
     }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Water")
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.2f);
     }
 }

@@ -20,9 +20,11 @@ public class Round2_TrapBox_Trigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.tag == "SpearBoxes")
         {       
             Trap2.transform.GetComponent<Round2_Trap_Mover>().turnon = false;
+
         }
         else if (other.tag == "Player")
         {

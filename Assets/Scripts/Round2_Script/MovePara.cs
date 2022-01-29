@@ -8,7 +8,7 @@ public class MovePara : MonoBehaviour
     public Rigidbody RB;
     public float speed;
     public Transform tr;
-    bool turnon = false;
+    public int index; 
     // Start is called before the first frame update
     public void Start()
     {

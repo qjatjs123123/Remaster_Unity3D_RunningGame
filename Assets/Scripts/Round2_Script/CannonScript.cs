@@ -23,7 +23,6 @@ public class CannonScript : MonoBehaviour
     IEnumerator CountAttackDelay(float WaitTime)
     {
         yield return new WaitForSeconds(WaitTime);
-        Debug.Log("adfdsa");
         Instantiate(Bomb, BombSpawn.position, Quaternion.identity);
         StartCoroutine(CountAttackDelay(WaitTime));
     }

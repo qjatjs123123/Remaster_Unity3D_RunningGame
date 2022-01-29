@@ -12,7 +12,7 @@ public class Wale_trigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
+
         if(other.tag == "Player")
         {
            whale.transform.GetComponent<MovePara>().move_whale();
