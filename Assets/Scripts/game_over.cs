@@ -10,6 +10,25 @@ public class game_over : MonoBehaviour
     public GameObject Camera;
     public Animator animator;
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            DieMessage = GameObject.Find("Canvas").transform.Find("DieMessage").gameObject;
+            DieMessage.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            Camera.GetComponent<ThirdPersonOrbitCamBasic>().enabled = false;
+            Player.GetComponent<MoveBehaviour>().enabled = false;
+            animator.Play("Locomotion", -1, 0);
+            animator.Play("Falling Back Death", -1, 0);
+
+            Player.GetComponent<MoveBehaviour>().PlaySound("DIE");
+
+
+        }
+    }
 
 
     private void OnTriggerEnter(Collider col)
@@ -31,12 +50,7 @@ public class game_over : MonoBehaviour
 
 
         }
-        else if (col.tag == "Water")
-        {
 
-            Destroy(gameObject, 1);
-
-        }
     }
 
     public void GameOver() // ÇÁ¸®ÆÕ¿ë
