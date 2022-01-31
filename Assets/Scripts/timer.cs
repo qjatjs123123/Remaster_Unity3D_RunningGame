@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour
 {
     public Text[] ClockText;    
-    public bool TimerOn = true;
+    public bool TimerOn = false;
     private float time;
     public GameObject DieMessage;
     public GameObject menu_Image;

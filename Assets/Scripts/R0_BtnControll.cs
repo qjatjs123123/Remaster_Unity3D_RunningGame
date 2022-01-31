@@ -13,6 +13,11 @@ public class R0_BtnControll : MonoBehaviour
     public GameObject canvas; // Äµ¹ö½º
     public GameObject finalCanvas;
 
+    public GameObject StartCam;
+    public GameObject MainCam;
+    public GameObject startMessage;
+    public GameObject timer;
+
     public void HoverSound()
     {
         myFx.PlayOneShot(hoverFx);
@@ -24,7 +29,11 @@ public class R0_BtnControll : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("Round1");
+        MainCam.SetActive(true);
+        StartCam.SetActive(false);
+        startMessage.SetActive(false);
+        canvas.transform.GetComponent<timer>().TimerOn = true;
+        timer.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -59,15 +68,12 @@ public class R0_BtnControll : MonoBehaviour
 
     public void GotoTitleBtn()
     {
-        SceneManager.LoadScene("Start_Menu");
-        finalCanvas = GameObject.FindWithTag("timer");
-        finalCanvas.SetActive(false);
-        canvas.SetActive(false);
+        MainCam.SetActive(false);
+        StartCam.SetActive(true);
+        startMessage.SetActive(true);
+        canvas.transform.GetComponent<timer>().TimerOn = false;
+        timer.SetActive(false);
 
-        if (SceneManager.GetActiveScene().name == "Start_Menu")
-        {
-            Destroy(canvas);
-        }
     }
 
 
