@@ -17,7 +17,7 @@ public class btn_response : MonoBehaviour
     public Transform Trap0_Spawn1;
     public Transform Trap0_Spawn2;
     public GameObject Trap0_Trigger;
-    public Animation[] blade_trap1;
+    public GameObject[] blade_trap;
 
 
 
@@ -45,11 +45,9 @@ public class btn_response : MonoBehaviour
                 Trap0[i].transform.position = v;
             }
         }
-        for (int i = 0; i < blade_trap1.Length; i++)
+        for (int i = 0; i < blade_trap.Length; i++)
         {
-            blade_trap1[i]["Anim_BladeTrap01_Play"].time = 0.0f;
-            blade_trap1[i].Stop();
-
+            blade_trap[i].SetActive(false);          
         }
         Trap0[0].SetActive(true);
         Trap0[1].SetActive(false);

@@ -24,9 +24,7 @@ public class Door_Anim : MonoBehaviour
             for(int i = 0; i< trap.Length; i++)
             {
                 trap[i].SetActive(true);
-                trap[i].transform.GetComponent<Animation>().wrapMode = WrapMode.Once;
-                trap[i].transform.GetComponent<Animation>().Play("Anim_BladeTrap01_Play");
-                
+
             }
         }
     }
