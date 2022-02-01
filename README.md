@@ -53,7 +53,7 @@ W:위, S:아래, A:왼쪽, D:오른쪽, SPACEBAR:점프, SHIFT:달리기, ESC:�
 ----------
 ### 2. 트랩 디자인 변경
 #### 2_1 통돌이 트랩 디자인
-![통돌이](https://user-images.githubusercontent.com/74814641/151961995-3bac12af-66f6-46cf-a300-744990d69acb.gif)기존  ->   변경![트랩6](https://user-images.githubusercontent.com/74814641/151962445-bfee6ffc-ac00-475b-9dde-ac271410f5e1.gif)
+![통돌이](https://user-images.githubusercontent.com/74814641/151961995-3bac12af-66f6-46cf-a300-744990d69acb.gif)기존 -> 변경![트랩6](https://user-images.githubusercontent.com/74814641/151962445-bfee6ffc-ac00-475b-9dde-ac271410f5e1.gif)
 
 ----------
 ### 3. 맵 디자인 변경
