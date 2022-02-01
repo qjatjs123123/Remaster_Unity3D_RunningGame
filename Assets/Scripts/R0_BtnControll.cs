@@ -17,6 +17,13 @@ public class R0_BtnControll : MonoBehaviour
     public GameObject MainCam;
     public GameObject startMessage;
     public GameObject timer;
+    public GameObject Player;
+    public Transform tr;
+    public GameObject DieMessage;
+
+    public btn_response btn_Response;
+
+
 
     public void HoverSound()
     {
@@ -29,11 +36,8 @@ public class R0_BtnControll : MonoBehaviour
 
     public void GameStart()
     {
-        MainCam.SetActive(true);
-        StartCam.SetActive(false);
-        startMessage.SetActive(false);
-        canvas.transform.GetComponent<timer>().TimerOn = true;
-        timer.SetActive(true);
+
+        SceneManager.LoadScene("Round2");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -68,11 +72,12 @@ public class R0_BtnControll : MonoBehaviour
 
     public void GotoTitleBtn()
     {
-        MainCam.SetActive(false);
-        StartCam.SetActive(true);
-        startMessage.SetActive(true);
-        canvas.transform.GetComponent<timer>().TimerOn = false;
-        timer.SetActive(false);
+        SceneManager.LoadScene("Start_Menu");
+        finalCanvas = GameObject.FindWithTag("timer");
+        finalCanvas.SetActive(false);
+        canvas.SetActive(false);
+
+
 
     }
 

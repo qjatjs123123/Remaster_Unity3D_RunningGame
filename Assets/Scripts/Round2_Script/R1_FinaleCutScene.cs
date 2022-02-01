@@ -27,7 +27,7 @@ public class R1_FinaleCutScene : MonoBehaviour
 
     private void Start()
     {
-        DeathCount = GameObject.FindWithTag("count").GetComponent<Text>();
+        DeathCount = GameObject.FindWithTag("count").GetComponent<Text>();  
         Time_Hour = GameObject.FindWithTag("hour").GetComponent<Text>();
         Time_Min = GameObject.FindWithTag("min").GetComponent<Text>();
         Time_sec = GameObject.FindWithTag("sec").GetComponent<Text>();
